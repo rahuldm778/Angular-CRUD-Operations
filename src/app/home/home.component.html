@@ -1,0 +1,30 @@
+
+<button class="btn btn-primary my-5"> <a routerLink='/persons' style="color: white;">+ Add Persons</a></button>
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">DOB</th>
+            <th scope="col">country</th>
+            <!-- <th scope="col">Avtar</th> -->
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let person of persons'>
+            <th scope="row">{{person.id}}</th>
+            <td>{{person.name}}</td>
+            <td>{{person.email}}</td>
+            <td>{{person.dob}}</td>
+            <td>{{person.country}}</td>
+            <td> <img [src]="person.avtar" alt="not a valid link" height="100px" width="100px" class="img-fluid"></td>
+            <td [routerLink]="['/updatePerson',person.id]"><a class="btn btn-sm btn-success">update</a></td>
+            <td><a class="btn btn-sm btn-danger" (click)='deletePerson(person.id)'>delete</a></td>
+          </tr>
+         
+      </table>
+</div>

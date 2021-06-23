@@ -1,0 +1,34 @@
+<div class="container">
+    <button class="btn btn-primary my-5"> <a routerLink='/' style="color: white;">Back to Table</a></button>
+
+    <h3>Update Product</h3>
+    <form  #form="ngForm" (ngSubmit)="updatePerson(form.value)">
+        <!-- <form> -->
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="data1.name" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="data1.email" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="dob" class="form-label">DOB</label>
+            <input type="text" class="form-control" id="dob" name="dob" [(ngModel)]="data1.dob" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label"> Country</label>
+            <input type="text" class="form-control" id="country" name="country" [(ngModel)]="data1.country" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="avtar" class="form-label">Avtar</label>
+            <input type="url" class="form-control" id="avtar" name="avtar" [(ngModel)]="data1.avtar" ngModel>
+        </div>
+
+        <button class="btn btn-primary">Submit Updated data</button>
+    </form>
+
+    
+
+</div>
